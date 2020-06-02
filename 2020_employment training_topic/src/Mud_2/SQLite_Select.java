@@ -16,27 +16,41 @@ public class SQLite_Select {
 
 	      stmt = c.createStatement();
 	      ResultSet rs = stmt.executeQuery( "SELECT * FROM gg1;" );
+	      
+	      int numm=0;
+	      //String[] both = new String[1];
 	      while ( rs.next() ) {
 	         //int id = rs.getInt("id");
-	         String  name = rs.getString("name");
-	         String  type = rs.getString("type");
-	         String  addhp = rs.getString("addhp");
-	         String  addatk = rs.getString("addatk");
+	    	  String[] sarr = new String[4]; 
+	    	 
+	         sarr[0] = rs.getString("name");
+	         sarr[1] = rs.getString("type");
+	         sarr[2] = rs.getString("addhp");
+	         sarr[3] = rs.getString("addatk");
 	         
-	         System.out.println( "name = " + name );
-	         System.out.println( "type = " + type );
-	         System.out.println( "addhp = " + addhp );
-	         System.out.println( "addatk = " + addatk );
-	         System.out.println();
+	         //both = ArrayUtils.addAll(both, sarr);
+	         
+	         
+	         System.out.println( "name = " + sarr[0] );
+	         System.out.println( "type = " + sarr[1] );
+	         System.out.println( "addhp = " + sarr[2] );
+	         System.out.println( "addatk = " + sarr[3] );
+	         numm++;
+	         System.out.println(numm);
+	         
 	      }
+	      
 	      rs.close();
 	      stmt.close();
 	      c.close();
+	      
 	    } catch ( Exception e ) {
 	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 	      System.exit(0);
 	    }
 	    System.out.println("Operation done successfully");
 	}
+	
+	
 
 }
