@@ -30,7 +30,7 @@ public class SQLite_Insert {
 	        System.exit(0);
 	    }
 	    
-	    System.out.println("Records created successfully");
+	    System.out.println("successfully");
 
 	}
 

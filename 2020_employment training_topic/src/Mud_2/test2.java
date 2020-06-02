@@ -8,9 +8,8 @@ public class test2 {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
-		Read_txt read_txt = new Read_txt();
-		int x = read_txt.getlinenum("./item_ANSI.txt");
-		System.out.println(x);
+		System.out.println("先確定DB 被刪除");
+		SQLite_zDelete.main(args);
 		
 		
 	}
